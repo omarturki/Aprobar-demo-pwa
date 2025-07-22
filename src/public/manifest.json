@@ -3,8 +3,9 @@
   "short_name": "PWA",
   "start_url": "/",
   "display": "standalone",
+  "display_override": ["minimal-ui", "standalone", "browser"],
   "background_color": "#ffffff",
-  "theme_color": "#317EFB",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "icons/icon-192.png",
