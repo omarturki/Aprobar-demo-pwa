@@ -117,9 +117,3 @@ app.get('/api/proxy', async (req, res) => {
 - Use a reverse proxy like **NGINX** or **Caddy** in front of the container
 - Ensure HTTPS (for service workers & PWA to work)
 - Customize `manifest.json` and app icons under `src/public/icons/`
-
----
-
-## 📝 License
-
-MIT
