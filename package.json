@@ -1,0 +1,13 @@
+{
+  "name": "demo-pwa",
+  "version": "1.0.0",
+  "description": "Minimal Web + API Project (Node.js + PWA)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "type": "module"
+}

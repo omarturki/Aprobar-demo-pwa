@@ -49,9 +49,8 @@ project/
 
 ```bash
 # From project root
-cd src
 npm install
-node server.js
+npm start
 ```
 
 Visit [http://localhost:8080](http://localhost:8080)
