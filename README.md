@@ -62,8 +62,8 @@ Visit [http://localhost:8080](http://localhost:8080)
 Build and run:
 
 ```bash
-docker build -t simple-pwa-app .
-docker run -p 8080:8080 simple-pwa-app
+docker build -t demo-pwa .
+docker run -p 8080:8080 demo-pwa
 ```
 
 Then open [http://localhost:8080](http://localhost:8080)
