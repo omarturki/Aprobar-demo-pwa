@@ -17,22 +17,22 @@ A zero-boilerplate, minimalistic full-stack project using only **HTML**, **CSS**
 
 ## 📁 Project Structure
 
+
 ```
 project/
 │
-├── public/                  # Static frontend files
-│   ├── index.html           # Main page
-│   ├── style.css            # Mobile-first CSS
-│   ├── app.js               # Frontend JS
-│   ├── manifest.json        # Web app manifest (PWA)
-│   ├── service-worker.js    # Service worker (PWA)
-│   └── icons/               # App icons for PWA
+├── src/                      # All source code (backend + frontend)
+│   ├── public/               # Static frontend files
+│   │   ├── index.html        # Main page
+│   │   ├── style.css         # Mobile-first CSS
+│   │   ├── app.js            # Frontend JS
+│   │   ├── manifest.json     # Web app manifest (PWA)
+│   │   ├── service-worker.js # Service worker (PWA)
+│   │   └── icons/            # App icons for PWA
+│   └── server.js             # Express-style Node.js server
 │
-├── backend/                 # Backend server and API
-│   └── server.js            # Express-style Node.js server
-│
-├── Dockerfile               # Docker container setup
-└── README.md                # Project documentation
+├── Dockerfile                # Docker container setup
+└── README.md                 # Project documentation
 ```
 
 ---
@@ -46,9 +46,10 @@ project/
 
 ## 🚀 Run Locally (Dev Mode)
 
+
 ```bash
 # From project root
-cd backend
+cd src
 npm install
 node server.js
 ```
@@ -87,7 +88,8 @@ This project is installable on mobile (Android/iOS) and meets key PWA criteria:
 
 ## 🔌 API Routes
 
-You can add custom API endpoints in `backend/server.js`. Example:
+
+You can add custom API endpoints in `src/server.js`. Example:
 
 ```js
 app.get('/api/hello', (req, res) => {
@@ -115,7 +117,7 @@ app.get('/api/proxy', async (req, res) => {
 
 - Use a reverse proxy like **NGINX** or **Caddy** in front of the container
 - Ensure HTTPS (for service workers & PWA to work)
-- Customize `manifest.json` and app icons under `public/icons/`
+- Customize `manifest.json` and app icons under `src/public/icons/`
 
 ---
 
