@@ -1,22 +1,25 @@
+
 # ⚡ Minimal Web + API Project (Node.js + PWA)
 
-A zero-boilerplate, minimalistic full-stack project using only **HTML**, **CSS**, and **JavaScript**. Built for simplicity, speed, and portability.
+
+A zero-boilerplate, minimalistic full-stack project using only **HTML**, **CSS**, and **JavaScript** (Node.js backend, static frontend). Built for simplicity, speed, and portability. No frameworks or build tools required.
 
 ---
+
 
 ## ✅ Features
 
-- ✅ No frameworks, no bundlers, no build step
-- ✅ One language: JavaScript (frontend + backend)
-- ✅ Mobile-first responsive layout
-- ✅ Fully PWA-compliant (installable on Android/iOS)
-- ✅ Backend APIs to support CORS workarounds or dynamic behavior
-- ✅ Single Dockerfile for local or production use
+- No frameworks, no bundlers, no build step
+- One language: JavaScript (frontend + backend)
+- Mobile-first responsive layout
+- Fully PWA-compliant (installable on Android/iOS)
+- Backend APIs for CORS workarounds or dynamic behavior
+- Single Dockerfile for local or production use
 
 ---
 
-## 📁 Project Structure
 
+## 📁 Project Structure
 
 ```
 project/
@@ -29,7 +32,7 @@ project/
 │   │   ├── manifest.json     # Web app manifest (PWA)
 │   │   ├── service-worker.js # Service worker (PWA)
 │   │   └── icons/            # App icons for PWA
-│   └── server.js             # Express-style Node.js server
+│   └── server.js             # Node.js server (Express-style)
 │
 ├── Dockerfile                # Docker container setup
 └── README.md                 # Project documentation
@@ -37,15 +40,16 @@ project/
 
 ---
 
+
 ## 🧱 Requirements
 
-- Node.js >= 18
-- Docker (optional, for containerized deploy)
+- Node.js >= 18 (for local development)
+- Docker (optional, for containerized deployment)
 
 ---
 
-## 🚀 Run Locally (Dev Mode)
 
+## 🚀 Run Locally (Dev Mode)
 
 ```bash
 # From project root
@@ -57,24 +61,26 @@ Visit [http://localhost:8080](http://localhost:8080)
 
 ---
 
+
 ## 🐳 Docker Usage
 
-Build and run:
+Build the image and run the container:
 
 ```bash
 docker build -t demo-pwa .
-docker run -p 8080:8080 demo-pwa
+docker run --rm -it -p 8080:8080 demo-pwa
 ```
 
 Then open [http://localhost:8080](http://localhost:8080)
 
 ---
 
+
 ## 📱 PWA Features
 
 This project is installable on mobile (Android/iOS) and meets key PWA criteria:
 - `manifest.json` for metadata and icons
-- `service-worker.js` with cache strategies
+- `service-worker.js` for offline support and caching
 - HTTPS-ready (required for PWA installability)
 - Responsive layout (`style.css`)
 
@@ -85,10 +91,10 @@ This project is installable on mobile (Android/iOS) and meets key PWA criteria:
 
 ---
 
+
 ## 🔌 API Routes
 
-
-You can add custom API endpoints in `src/server.js`. Example:
+Add custom API endpoints in `src/server.js`. Example:
 
 ```js
 app.get('/api/hello', (req, res) => {
@@ -97,6 +103,7 @@ app.get('/api/hello', (req, res) => {
 ```
 
 ---
+
 
 ## 🌍 Proxy Example for CORS Bypass
 
@@ -112,8 +119,10 @@ app.get('/api/proxy', async (req, res) => {
 
 ---
 
+
 ## 📦 Production Tips
 
 - Use a reverse proxy like **NGINX** or **Caddy** in front of the container
-- Ensure HTTPS (for service workers & PWA to work)
+- Ensure HTTPS (required for service workers & PWA installability)
 - Customize `manifest.json` and app icons under `src/public/icons/`
+- For best performance, serve static files with cache headers
