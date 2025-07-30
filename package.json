@@ -4,7 +4,8 @@
   "description": "Minimal Web + API Project (Node.js + PWA)",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "build": "vite build"
   },
   "author": "dalogax@gmail.com",
   "license": "MIT",
